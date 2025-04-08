@@ -1,0 +1,19 @@
+{
+  "name": "r410-tp2-romain_zervo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dept-info-iut-dijon/R410-TP2-Romain_ZERVO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/dept-info-iut-dijon/R410-TP2-Romain_ZERVO/issues"
+  },
+  "homepage": "https://github.com/dept-info-iut-dijon/R410-TP2-Romain_ZERVO#readme",
+  "description": ""
+}
