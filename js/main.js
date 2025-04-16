@@ -1,5 +1,7 @@
-﻿import TextModifier from "./textModifier.js";
+﻿import Resources from "./resources.js";
 
-window.onload = () => {
-    new TextModifier();
-}
+window.onload = async () => {
+    const res = new Resources();
+    await res.loadResources("/res");
+    console.log(res.getResource("title"));
+};
