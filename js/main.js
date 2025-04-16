@@ -1,5 +1,6 @@
-﻿import TextModifier from "./textModifier.js";
+﻿import MainView from "./mainView.js";
 
 window.onload = async () => {
-    new TextModifier();
+    const view = new MainView("/res");
 };
+
