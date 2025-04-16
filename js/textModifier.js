@@ -1,37 +1,31 @@
+// textModifier.js
 import Resources from "./resources.js";
 
 export default class TextModifier {
     #resources;
-    #resourcesPath;
     #resourceElements;
 
     /**
      * Constructeur de la classe TextModifier
+     * @param resources {Resources} Instance de Resources à utiliser
      */
-    constructor() {
-        this.#resources = new Resources();
-        this.#resourcesPath = "/res/"
-        this.UpdateDocument()
-            .then(); //Appel asynchrone dans le constructeur
-
+    constructor(resources) {
+        this.#resources = resources;
     }
 
     /**
-     *
+     * Met à jour le document avec les ressources textuelles
      * @returns {Promise<void>}
      * @constructor
      */
     async UpdateDocument() {
-        this.#resourceElements = document.querySelectorAll("[stringres]"); //Evite un chargement trop tot en code
+        this.#resourceElements = document.querySelectorAll("[stringres]");
 
         document.documentElement.setAttribute("lang", this.#resources.LanguageCode);
-        await this.#resources.loadResources(this.#resourcesPath);
 
         this.#resourceElements.forEach((element) => {
-            const resourceKey = element.getAttribute("stringres"); // Récupère la clé de la ressource
+            const resourceKey = element.getAttribute("stringres");
             element.innerText = this.#resources.getResource(resourceKey);
         });
     }
-
 }
-

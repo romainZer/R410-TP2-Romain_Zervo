@@ -4,7 +4,15 @@
     "value": "Titre"
   },
   {
-    "name" : "testPage",
-    "value" : "Page de test"
+    "name": "testPage",
+    "value": "Page de test"
+  },
+  {
+    "name" : "buttonContent",
+    "value" : "Message"
+  },
+  {
+    "name": "message",
+    "value": "Ceci est un message provenant des ressources !"
   }
 ]

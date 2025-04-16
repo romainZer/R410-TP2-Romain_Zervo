@@ -6,5 +6,13 @@
   {
     "name" : "testPage",
     "value" : "Test page"
+  },
+  {
+    "name" : "buttonContent",
+    "value" : "Message"
+  },
+  {
+    "name": "message",
+    "value": "This is a message from resources!"
   }
 ]
