@@ -3,6 +3,7 @@ import Resources from "./resources.js";
 export default class TextModifier {
     #resources;
     #resourcesPath;
+    #resourceElements;
 
     /**
      * Constructeur de la classe TextModifier
@@ -12,6 +13,7 @@ export default class TextModifier {
         this.#resourcesPath = "/res/"
         this.UpdateDocument()
             .then(); //Appel asynchrone dans le constructeur
+
     }
 
     /**
@@ -20,9 +22,16 @@ export default class TextModifier {
      * @constructor
      */
     async UpdateDocument() {
+        this.#resourceElements = document.querySelectorAll("[stringres]"); //Evite un chargement trop tot en code
+
         document.documentElement.setAttribute("lang", this.#resources.LanguageCode);
         await this.#resources.loadResources(this.#resourcesPath);
-        alert(this.#resources.getResource("title"))
+
+        this.#resourceElements.forEach((element) => {
+            const resourceKey = element.getAttribute("stringres"); // Récupère la clé de la ressource
+            element.innerText = this.#resources.getResource(resourceKey);
+        });
     }
+
 }
 
