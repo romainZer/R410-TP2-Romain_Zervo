@@ -1,6 +1,10 @@
 ﻿[
   {
-    "name" : "title",
-    "value" : "Titre"
+    "name": "title",
+    "value": "Titre"
+  },
+  {
+    "name" : "testPage",
+    "value" : "Page de test"
   }
 ]

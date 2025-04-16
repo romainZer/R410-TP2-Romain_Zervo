@@ -2,5 +2,9 @@
   {
     "name" : "title",
     "value" : "Title"
+  },
+  {
+    "name" : "testPage",
+    "value" : "Test page"
   }
 ]
