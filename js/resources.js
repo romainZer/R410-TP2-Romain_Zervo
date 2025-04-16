@@ -10,13 +10,17 @@ export default class Resources {
         this.#resources = {};
     }
 
+    /**
+     * Récupérer le code de langue
+     * @returns {String} Code de langue en format ISO
+     */
     get LanguageCode() {
         return this.#languageCode;
     }
 
     /**
      * Charge les ressources en fonction de la langue du navigateur
-     * @param path
+     * @param path Chemin des ressources
      * @returns {Promise<void>}
      */
     async loadResources(path) {
